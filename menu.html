@@ -1,0 +1,92 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>Lyly Kitchen</title>
+<meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" href="css/style.css" type="text/css" media="all" />
+<!--[if lte IE 6]><link rel="stylesheet" href="css/ie6.css" type="text/css" media="all" /><![endif]-->
+<script src="js/jquery-1.4.1.min.js" type="text/javascript"></script>
+<script src="js/jquery.jcarousel.pack.js" type="text/javascript"></script>
+<script src="js/jquery-func.js" type="text/javascript"></script>
+</head>
+<body>
+<!-- Shell -->
+<div class="shell">
+  <!-- Header -->
+  <div id="header">
+    <h1 id="logo"><a href="#">Lyly Kitchen</a></h1>
+        <!-- Cart 
+    <div id="cart"> <a href="#" class="cart-link">Your Shopping Cart</a>
+      <div class="cl">&nbsp;</div>
+      <span>Articles: <strong>4</strong></span> &nbsp;&nbsp; <span>Cost: <strong>$250.99</strong></span> </div>
+    End Cart -->
+    <!-- Navigation -->
+    <div id="navigation">
+      <ul>
+        <li><a href="index.html" >Home</a></li>
+        <li><a href="menu.html" class="active">Menu</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="delivery.html">Delivery</a></li>
+        <li><a href="login.html">Login</a></li>
+        <li><a href="register.html">Register</a></li>
+      </ul>
+    </div>
+    <!-- End Navigation -->
+  </div>
+  <!-- End Header -->
+  <div id="menu">
+    <ul>
+      <li><a href="basah.html" class="active"> Kue Basah</a></li>
+      <li><a href="kering.html"> Kue Kering</a></li>
+    </ul>
+  </div>
+  <div class="kue">
+    <input type="text" id ="search" onkeyup="searchFilter()" placeholder="Cari">
+    <div class="tipeKue">
+    <h1>Kue Basah</h1>
+    <ul class="listKue">
+      <li class="item"><img src="css/images/kue1.jpg" alt=""><p class="namakue">Marble Cake</p><p class="harga">20.000</p><button onclick="addToCart(1,'Marble Cake',20000)" class="tambah">+</button> <span id="jumlah1">0</span> <button onclick="kurangToCart(1,'Kue 1',20000)" class="tambah">-</button></li>
+      <li class="item"><img src="css/images/kue2.jpg" alt=""><p class="namakue">Belgian Chocolate Cake</p><p class="harga">20.000</p><button onclick="addToCart(2,'Belgian Cake',20000)" class="tambah">+</button> <span id="jumlah2">0</span> <button onclick="kurangToCart(2,'Kue 2',20000)" class="tambah">-</button></li>
+      <li class="item"><img src="css/images/kue3.jpg" alt=""><p class="namakue">Pandan Cake</p><p class="harga">20.000</p><button onclick="addToCart(3,'Pandan Cake',20000)" class="tambah">+</button> <span id="jumlah3">0</span> <button onclick="kurangToCart(3,'Kue 3',20000)" class="tambah">-</button></li>
+      <li class="item"><img src="css/images/kue4.jpg" alt=""><p class="namakue">Lapis Surabaya</p><p class="harga">20.000</p><button onclick="addToCart(4,'Lapis Surabaya',20000)" class="tambah">+</button> <span id="jumlah4">0</span> <button onclick="kurangToCart(4,'Kue 4',20000)" class="tambah">-</button></li>
+      <li class="item"><img src="css/images/kue5.jpg" alt=""><p class="namakue">Nastar Crumble in Jar</p><p class="harga">20.000</p><button onclick="addToCart(5,'Nastar Crumble in Jar',20000)" class="tambah">+</button> <span id="jumlah5">0</span> <button onclick="kurangToCart(5,'Kue 5',20000)" class="tambah">-</button></li>
+      <li class="item"><img src="css/images/kue6.jpg" alt=""><p class="namakue">Kue 1</p><p class="harga">20.000</p><button onclick="addToCart(6,'Kue 6',20000)" class="tambah">+</button> <span id="jumlah6">0</span> <button onclick="kurangToCart(6,'Kue 6',20000)" class="tambah">-</button></li>
+      <li class="item"><img src="css/images/kue7.jpg" alt=""><p class="namakue">Bolu Jadul</p><p class="harga">20.000</p><button onclick="addToCart(7,'Bolu Jadul',20000)" class="tambah">+</button> <span id="jumlah7">0</span> <button onclick="kurangToCart(7,'Kue 7',20000)" class="tambah">-</button></li>
+      <li class="item"><img src="css/images/kue8.png" alt=""><p class="namakue">Belgian Cake in Jar</p><p class="harga">20.000</p><button onclick="addToCart(8,'Belgian Cake in Jar',20000)" class="tambah">+</button> <span id="jumlah8">0</span> <button onclick="kurangToCart(8,'Kue 8',20000)" class="tambah">-</button></li>
+      <li class="item"><img src="css/images/kue9.png" alt=""><p class="namakue">Nastar Cake</p><p class="harga">20.000</p><button onclick="addToCart(9,'Nastar Cake',20000)" class="tambah">+</button> <span id="jumlah9">0</span> <button onclick="kurangToCart(9,'Kue 9',20000)" class="tambah">-</button></li>
+      <li class="item"><img src="css/images/kue10.png" alt=""><p class="namakue">Mocca Nougat in Jar</p><p class="harga">20.000</p><button onclick="addToCart(10,'Mocca Nougat',20000)" class="tambah">+</button> <span id="jumlah10">0</span> <button onclick="kurangToCart(10,'Kue 10',20000)" class="tambah">-</button></li>
+      <li class="item"><img src="css/images/kue11.png" alt=""><p class="namakue">Classic Chesse</p><p class="harga">20.000</p><button onclick="addToCart(11,'Classic Chesse',20000)" class="tambah">+</button> <span id="jumlah11">0</span> <button onclick="kurangToCart(11,'Kue 11',20000)" class="tambah">-</button></li>
+      <li class="item"><img src="css/images/kue12.png" alt=""><p class="namakue">Klepon Cake in Jar</p><p class="harga">20.000</p><button onclick="addToCart(12,'Klepon Cake in Jar',20000)" class="tambah">+</button> <span id="jumlah12">0</span> <button onclick="kurangToCart(12,'Kue 12',20000)" class="tambah">-</button></li>
+      <li class="item"><img src="css/images/kue13.png" alt=""><p class="namakue">Pisang Bolen Keju</p><p class="harga">20.000</p><button onclick="addToCart(13,'Pisang Bolen Keju',20000)" class="tambah">+</button> <span id="jumlah13">0</span> <button onclick="kurangToCart(13,'Kue 13',20000)" class="tambah">-</button></li>
+      <li class="item"><img src="css/images/kue17.png" alt=""><p class="namakue">Pisang Bolen Coklat</p><p class="harga">20.000</p><button onclick="addToCart(14,'Pisang Bolen Coklat',20000)" class="tambah">+</button> <span id="jumlah14">0</span> <button onclick="kurangToCart(17,'Kue 14',20000)" class="tambah">-</button></li>
+      <li class="item"><img src="css/images/kue20.png" alt=""><p class="namakue">Kue 3</p><p class="harga">20.000</p><button onclick="addToCart(15,'Kue 17',20000)" class="tambah">+</button> <span id="jumlah15">0</span> <button onclick="kurangToCart(3,'Kue 15',20000)" class="tambah">-</button></li>
+      <li class="item"><img src="css/images/kue21.png" alt=""><p class="namakue">Kue 4</p><p class="harga">20.000</p><button onclick="addToCart(16,'Kue 18',20000)" class="tambah">+</button> <span id="jumlah16">0</span> <button onclick="kurangToCart(4,'Kue 16',20000)" class="tambah">-</button></li>
+      <li class="item"><img src="css/images/kue23.png" alt=""><p class="namakue">Tape Cake</p><p class="harga">20.000</p><button onclick="addToCart(17,'Tape Cake',20000)" class="tambah">+</button> <span id="jumlah17">0</span> <button onclick="kurangToCart(5,'Tape Cake',20000)" class="tambah">-</button></li>
+      <li class="item"><img src="css/images/kue26.png" alt=""><p class="namakue">Kue 1</p><p class="harga">20.000</p><button onclick="addToCart(9,'Kue 23',20000)" class="tambah">+</button> <span id="jumlah9">0</span> <button onclick="kurangToCart(9,'Kue 9',20000)" class="tambah">-</button></li>
+      <li class="item"><img src="css/images/kue27.png" alt=""><p class="namakue">Kue 1</p><p class="harga">20.000</p><button onclick="addToCart(10,'Kue 10',20000)" class="tambah">+</button> <span id="jumlah10">0</span> <button onclick="kurangToCart(10,'Kue 10',20000)" class="tambah">-</button></li>
+      <li class="item"><img src="css/images/kue28.png" alt=""><p class="namakue">Kue 1</p><p class="harga">20.000</p><button onclick="addToCart(11,'Kue 11',20000)" class="tambah">+</button> <span id="jumlah11">0</span> <button onclick="kurangToCart(11,'Kue 11',20000)" class="tambah">-</button></li>
+      <li class="item"><img src="css/images/kue31.png" alt=""><p class="namakue">Kue 1</p><p class="harga">20.000</p><button onclick="addToCart(14,'Kue 14',20000)" class="tambah">+</button> <span id="jumlah14">0</span> <button onclick="kurangToCart(14,'Kue 14',20000)" class="tambah">-</button></li>
+      <li class="item"><img src="css/images/kue32.png" alt=""><p class="namakue">Kue 1</p><p class="harga">20.000</p><button onclick="addToCart(15,'Kue 15',20000)" class="tambah">+</button> <span id="jumlah15">0</span> <button onclick="kurangToCart(15,'Kue 15',20000)" class="tambah">-</button></li>
+      <li class="item"><img src="css/images/kue33.png" alt=""><p class="namakue">Kue 1</p><p class="harga">20.000</p><button onclick="addToCart(16,'Kue 16',20000)" class="tambah">+</button> <span id="jumlah16">0</span> <button onclick="kurangToCart(16,'Kue 16',20000)" class="tambah">-</button></li>
+    </ul>
+    </div>
+    <div class="tipeKue">
+    <h1>Kue Kering</h1>
+    <ul class="listKue">
+      <li class="item"><img src="css/images/kue24.png" alt=""><p class="namakue">Castangles</p><p class="harga">20.000</p><button onclick="addToCart(18,'Castangles',20000)" class="tambah">+</button> <span id="jumlah18">0</span> <button onclick="kurangToCart(7,'Castangles',20000)" class="tambah">-</button></li>
+      <li class="item"><img src="css/images/kue29.png" alt=""><p class="namakue">Nutella Tart</p><p class="harga">20.000</p><button onclick="addToCart(12,'Kue 12',20000)" class="tambah">+</button> <span id="jumlah12">0</span> <button onclick="kurangToCart(12,'Kue 12',20000)" class="tambah">-</button></li>
+      <li class="item"><img src="css/images/kue30.png" alt=""><p class="namakue">Nastar</p><p class="harga">20.000</p><button onclick="addToCart(13,'Kue 13',20000)" class="tambah">+</button> <span id="jumlah13">0</span> <button onclick="kurangToCart(13,'Kue 13',20000)" class="tambah">-</button></li>
+      <li class="item"><img src="css/images/kue34.png" alt=""><p class="namakue">Smoked Beef Chesse</p><p class="harga">20.000</p><button onclick="addToCart(17,'Kue 17',20000)" class="tambah">+</button> <span id="jumlah17">0</span> <button onclick="kurangToCart(17,'Kue 17',20000)" class="tambah">-</button></li>
+    </ul>
+    </div>
+    </div>
+  </div>
+  <div class="bayar">   
+  <div id="cart-items">
+  </div>
+  <span id="cart-total"> </span>
+  <button onclick="tes()">bayar</button>
+</div>
+</div>
+</body>
+</html>
